@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 export default function Navigation() {
+  const { cart } = useContext(CartContext);
+
   const cartLogoStyle = {
     background: "#F59E0D",
     display: "flex",
@@ -28,7 +31,7 @@ export default function Navigation() {
           <li className="ml-6">
             <Link to="/cart">
               <div style={cartLogoStyle} className="flex">
-                <span>10</span>
+                <span>{cart.totalItems ? cart.totalItems : ""}</span>
                 <img className="ml-2" src="\images\cart.png" alt="cart" />
               </div>
             </Link>
