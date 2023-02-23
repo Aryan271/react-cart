@@ -20,7 +20,7 @@ export default function Cart() {
     }
 
     axios
-      .post("http://localhost:5000/api/products/cart-items", {
+      .post("https://pizza-rest-api.onrender.com/api/products/cart-items", {
         ids: Object.keys(cart.items),
       })
       .then(function (response) {
