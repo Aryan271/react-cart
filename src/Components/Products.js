@@ -10,7 +10,7 @@ export default function Products() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://pizza-rest-api.onrender.com/api/products")
       .then(
         (response) => {
           return response.data;

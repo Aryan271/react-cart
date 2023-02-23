@@ -13,7 +13,7 @@ export default function SingleProduct() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${params._id}`)
+      .get(`https://pizza-rest-api.onrender.com/api/products/${params._id}`)
       .then(
         (response) => {
           return response.data;
